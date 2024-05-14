@@ -72,52 +72,5 @@ void main() {
       await tester.tap(find.byIcon(Icons.edit));
       await tester.pumpAndSettle();
     });
-
-    // await tester.enterText(find.byType(TextField), '123456789');
-    // expect(find.text('123456789'), findsOneWidget);
-
-    // await tester.tap(find.byType(Checkbox));
-    // await tester.pumpAndSettle();
-    // expect(tester.widget<Checkbox>(find.byType(Checkbox)).value, true);
-
-    // await tester.tap(find.text('Get Activation Code'));
-    // await tester.pumpAndSettle();
-
-    // expect(find.text('Enter the activation code you received via SMS.'), findsOneWidget);
-
-    // await tester.enterText(find.byType(TextField), '123456');
-    // await tester.tap(find.text('Activate'));
-    // await tester.pumpAndSettle();
-
-    // final phNumFormField = find.byType(NumberFormat);
-    // final checkBox = find.byType(Checkbox);
-    // expect(
-    //     tester.getSemantics(checkBox),
-    //     matchesSemantics(
-    //       hasTapAction: true,
-    //       hasCheckedState: true,
-    //       isChecked: false,
-    //       hasEnabledState: true,
-    //       isEnabled: true,
-    //       isFocusable: true,
-    //     ));
-    // final getCodeButton = find.byType(ElevatedButton);
-
-    // await tester.enterText(phNumFormField, "123456789");
-    // await tester.tap(checkBox);
-    // await tester.pumpAndSettle();
-    // expect(
-    //     tester.getSemantics(checkBox),
-    //     matchesSemantics(
-    //       hasTapAction: true,
-    //       hasCheckedState: true,
-    //       isChecked: true,
-    //       hasEnabledState: true,
-    //       isEnabled: true,
-    //       isFocusable: true,
-    //     ));
-
-    // await tester.tap(getCodeButton);
-    // await tester.pumpAndSettle();
   });
 }
