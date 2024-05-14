@@ -311,26 +311,24 @@ class _factoryDashboardState extends State<factoryDashboard> {
           )
         ],
       ),
-      body: Column(children: [
-        currentIndex == 1
-            ? _buildFactoryDashboard(factoryName)
-            : currentIndex == 0
-                ? factoryName == 1
-                    ? Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.61,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 224, 221, 221),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.48,
-                                child: Expanded(
+      body: SingleChildScrollView(
+        child: Column(children: [
+          currentIndex == 1
+              ? _buildFactoryDashboard(factoryName)
+              : currentIndex == 0
+                  ? factoryName == 1
+                      ? Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.61,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 224, 221, 221),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              children: [
+                                Expanded(
                                   flex: 1,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -358,160 +356,167 @@ class _factoryDashboardState extends State<factoryDashboard> {
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                height: 30,
-                              ),
-                              Align(
-                                alignment: Alignment.bottomRight,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(right: 20.0),
-                                  child: SizedBox(
-                                    width: MediaQuery.of(context).size.width *
-                                        0.20,
-                                    height: 50,
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const invitationPage()),
-                                        );
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                          shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(15))),
-                                      child: Icon(
-                                        Icons.add,
-                                        size: 30,
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          right: 20.0, bottom: 20.0),
+                                      child: SizedBox(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.20,
+                                        height: 50,
+                                        child: ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.of(context).push(
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const invitationPage()),
+                                            );
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          15))),
+                                          child: Icon(
+                                            Icons.add,
+                                            size: 30,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.61,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 224, 221, 221),
-                            borderRadius: BorderRadius.circular(10),
+                        )
+                      : Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.61,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 224, 221, 221),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
-                        ),
-                      )
-                : currentIndex == 2 && factoryName == 1
-                    ? Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.61,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 224, 221, 221),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 20.0),
-                                child: Row(
+                        )
+                  : currentIndex == 2 && factoryName == 1
+                      ? Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.61,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 224, 221, 221),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 20.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10),
+                                        child: const Text(
+                                          "Minimum Threshold",
+                                          style: TextStyle(
+                                            fontSize: 23,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.info_outline,
+                                        size: 25,
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 10),
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          child: Icon(
+                                            Icons.edit,
+                                            size: 25,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(height: 25),
+                                Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 10),
-                                      child: const Text(
-                                        "Minimum Threshold",
-                                        style: TextStyle(
-                                          fontSize: 23,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.info_outline,
-                                      size: 25,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 10),
-                                      child: ElevatedButton(
-                                        onPressed: () {},
-                                        child: Icon(
-                                          Icons.edit,
-                                          size: 25,
-                                        ),
-                                      ),
-                                    ),
+                                    _buildThreshold(
+                                        "Steam\nPressure", "29", "bar"),
+                                    _buildThreshold("Steam\nFlow", "22", "T/H"),
                                   ],
                                 ),
-                              ),
-                              const SizedBox(height: 25),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  _buildThreshold(
-                                      "Steam\nPressure", "29", "bar"),
-                                  _buildThreshold("Steam\nFlow", "22", "T/H"),
-                                ],
-                              ),
-                              const SizedBox(height: 20),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  _buildThreshold("Water\nLevel", "53", "%"),
-                                  _buildThreshold(
-                                      "Power\nFrequency", "48", "Hz"),
-                                ],
-                              ),
-                            ],
+                                const SizedBox(height: 20),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    _buildThreshold("Water\nLevel", "53", "%"),
+                                    _buildThreshold(
+                                        "Power\nFrequency", "48", "Hz"),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
+                      : Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.61,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 224, 221, 221),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
                           ),
                         ),
-                      )
-                    : Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.61,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 224, 221, 221),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                      ),
-        SizedBox(
-          height: 25,
-        ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.only(left: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              factoryButton(1, 'Factory 1', Icons.factory),
-              const SizedBox(
-                width: 20,
-              ),
-              factoryButton(2, 'Factory 2', Icons.factory),
-              const SizedBox(
-                width: 20,
-              ),
-              factoryButton(3, 'Factory 3', Icons.factory),
-              const SizedBox(
-                width: 20,
-              ),
-              factoryButton(4, 'Factory 4', Icons.factory),
-            ],
+          SizedBox(
+            height: 25,
           ),
-        )
-      ]),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                factoryButton(1, 'Factory 1', Icons.factory),
+                const SizedBox(
+                  width: 20,
+                ),
+                factoryButton(2, 'Factory 2', Icons.factory),
+                const SizedBox(
+                  width: 20,
+                ),
+                factoryButton(3, 'Factory 3', Icons.factory),
+                const SizedBox(
+                  width: 20,
+                ),
+                factoryButton(4, 'Factory 4', Icons.factory),
+              ],
+            ),
+          )
+        ]),
+      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
           onTap: (int index) {

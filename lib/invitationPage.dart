@@ -47,15 +47,13 @@ class _invitationPageState extends State<invitationPage> {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(5, 5, 5, 35),
-              child: Expanded(
-                  flex: 1,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(),
-                        hintText: 'Type here'),
-                  )),
+              child: TextField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(),
+                    hintText: 'Type here'),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
