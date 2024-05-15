@@ -24,7 +24,6 @@ void main() {
       await tester.enterText(phNumFormField, '123456789');
       await tester.tap(checkBox);
       await tester.pumpAndSettle();
-      
 
       await tester.pump(testDuration);
       await tester.tap(getCodeButton);
