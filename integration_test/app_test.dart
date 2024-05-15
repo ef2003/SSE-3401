@@ -14,7 +14,6 @@ void main() {
       app.main();
       await tester.pumpAndSettle();
 
-    
       final phNumFormField = find.byType(TextField);
       final checkBox = find.byType(Checkbox);
       final getCodeButton = find.byType(ElevatedButton);
